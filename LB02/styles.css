@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1000; /* Ensure the header is above other elements */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    position: relative;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    left: -375px;
+    top: 10px; /* Adjusted to be in the bar */
+    z-index: 2000; /* Ensure the menu icon is above other elements */
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 45px; /* Adjusted to be right below the menu icon */
+    left: -1580px; /* Aligned with the left side */
+    width: 200px;
+    padding: 10px;
+    z-index: 1500; /* Ensure the menu is above other elements */
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+nav ul.menu-active {
+    display: flex;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.product img {
+    width: 100%;
+    max-width: 600px; /* Adjust the image size */
+    height: auto;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.product-text {
+    flex: 1; /* Take the remaining space */
+}
+
+.product-text h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.product p {
+    font-size: 14px;
+    color: #555;
+}
+
+main {
+    margin: 20px 0;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section img {
+    width: 100%;
+    max-width: 600px; /* Adjust the image size */
+    height: auto;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Startseite spezifisches CSS */
+#home h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+#home p.intro {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Add space between the content blocks */
+}
+
+.home-content img {
+    width: 100%;
+    max-width: 600px; /* Adjust the image size */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.home-text {
+    text-align: left;
+    max-width: 600px;
+}
+
+.home-text ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Add white space between the content blocks */
+.home-content + .home-content {
+    border-top: 10px solid #fff;
+    padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .home-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 40px; /* Add space between the content blocks */
+    }
+
+    .home-content img {
+        margin-right: 10px; /* Set to 10px to reduce space between image and text */
+        margin-bottom: 0;
+    }
+
+    .home-text {
+        text-align: left;
+    }
+
+    /* Add white space between the content blocks */
+    .home-content + .home-content {
+        border-top: 10px solid #fff;
+        padding-top: 20px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        left: 10px;
+        top: 10px;
+    }
+
+    nav ul {
+        top: 35px; /* Adjusted for mobile */
+        left: 0;
+        width: 100%;
+    }
+
+    .product {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product img {
+        max-width: 100%; /* Full width for mobile */
+        margin-right: 0;
+        margin-bottom: 10px; /* Space below the image on mobile */
+    }
+
+    .product-text {
+        text-align: center;
+    }
+
+    .home-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-content img {
+        max-width: 100%; /* Full width for mobile */
+        margin-right: 0;
+        margin-bottom: 10px; /* Space below the image on mobile */
+    }
+
+    .home-text {
+        text-align: center;
+    }
+
+    /* Add white space between the content blocks */
+    .home-content + .home-content {
+        border-top: 10px solid #fff;
+        padding-top: 20px;
+    }
+}
